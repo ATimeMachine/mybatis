@@ -48,7 +48,7 @@
 		</javaClientGenerator>
 
 		<!-- 指定数据库表 -->
-		<table tableName="t_promotional" domainObjectName="promotional"
+		<table tableName="t_promotional" domainObjectName="Promotional"
 			enableCountByExample="false" enableUpdateByExample="false"
 			enableDeleteByExample="false" enableSelectByExample="false"
 			selectByExampleQueryId="false"></table>

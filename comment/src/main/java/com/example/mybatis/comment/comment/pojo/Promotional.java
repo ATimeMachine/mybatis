@@ -3,7 +3,7 @@ package com.example.mybatis.comment.comment.pojo;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class promotional {
+public class Promotional {
     /**
      * 促销ID
      * 表字段 : t_promotional.prom_id
@@ -62,7 +62,7 @@ public class promotional {
      * 订单多买-优惠条件-满 (N) 件
      * 表字段 : t_promotional.full_condition
      */
-    private Short fullCondition;
+    private Integer fullCondition;
 
     /**
      * 批量特价
@@ -92,7 +92,7 @@ public class promotional {
      * 多买/满减/换购/返券-是否累计限额（0：不限额；1：限额/件）
      * 表字段 : t_promotional.limits
      */
-    private Short limits;
+    private Integer limits;
 
     /**
      * 多买-限购数量-限购（N）件（N为限购数量）
@@ -140,7 +140,7 @@ public class promotional {
      * 是否审核后立即发布(1 审核后立即发布 2 定时发布)
      * 表字段 : t_promotional.releases
      */
-    private Short releases;
+    private Integer releases;
 
     /**
      * 按时发布时间
@@ -152,19 +152,19 @@ public class promotional {
      * 审核状态(1：待提交；2：待审核；3：已驳回；4：已生效未发布；5:已发布未开始 6：活动中；7：已结束)
      * 表字段 : t_promotional.auditor_status
      */
-    private Short auditorStatus;
+    private Integer auditorStatus;
 
     /**
      * 优惠范围 1:商品活动,2:分类活动,3:品牌活动,4:全场活动
      * 表字段 : t_promotional.pref_range
      */
-    private Short prefRange;
+    private Integer prefRange;
 
     /**
      * 优惠方式(1：不累计；2：每满按比例累计；3：阶梯满)
      * 表字段 : t_promotional.pref_way
      */
-    private Short prefWay;
+    private Integer prefWay;
 
     /**
      * 多买-优惠每满(N件)
@@ -188,13 +188,13 @@ public class promotional {
      * (1 已废弃 0 可用)
      * 表字段 : t_promotional.deleted
      */
-    private Short deleted;
+    private Integer deleted;
 
     /**
      * 批量设置类型（1特价 2减价 3 折扣）
      * 表字段 : t_promotional.batch_type
      */
-    private Short batchType;
+    private Integer batchType;
 
     /**
      * 多买优惠(打N折)
@@ -206,7 +206,7 @@ public class promotional {
      * 多买优惠类型（1减件 2 每件打折 3 每件N元 4 第N件打折 ）
      * 表字段 : t_promotional.minus_type
      */
-    private Short minusType;
+    private Integer minusType;
 
     /**
      * 满减/换购/返券-最高累计N元
@@ -242,7 +242,7 @@ public class promotional {
      * 是否限时（0：不限时，1：限时）
      * 表字段 : t_promotional.time_limit_status
      */
-    private Short timeLimitStatus;
+    private Integer timeLimitStatus;
 
     /**
      * 限时的开始时间
@@ -296,25 +296,25 @@ public class promotional {
      * 订单返券-总限量（0:不限量，0<N,表示限量的数量）
      * 表字段 : t_promotional.total_limit
      */
-    private Short totalLimit;
+    private Integer totalLimit;
 
     /**
      * 订单返券-每日限量
      * 表字段 : t_promotional.daily_limit
      */
-    private Short dailyLimit;
+    private Integer dailyLimit;
 
     /**
      * 订单返券-每人限量
      * 表字段 : t_promotional.people_limit
      */
-    private Short peopleLimit;
+    private Integer peopleLimit;
 
     /**
      * 订单返券-每人每日限量
      * 表字段 : t_promotional.daily_people_limit
      */
-    private Short dailyPeopleLimit;
+    private Integer dailyPeopleLimit;
 
     public Integer getPromId() {
         return promId;
@@ -388,11 +388,11 @@ public class promotional {
         this.remark = remark;
     }
 
-    public Short getFullCondition() {
+    public Integer getFullCondition() {
         return fullCondition;
     }
 
-    public void setFullCondition(Short fullCondition) {
+    public void setFullCondition(Integer fullCondition) {
         this.fullCondition = fullCondition;
     }
 
@@ -428,11 +428,11 @@ public class promotional {
         this.eachFullMoney = eachFullMoney;
     }
 
-    public Short getLimits() {
+    public Integer getLimits() {
         return limits;
     }
 
-    public void setLimits(Short limits) {
+    public void setLimits(Integer limits) {
         this.limits = limits;
     }
 
@@ -492,11 +492,11 @@ public class promotional {
         this.auditorTime = auditorTime;
     }
 
-    public Short getReleases() {
+    public Integer getReleases() {
         return releases;
     }
 
-    public void setReleases(Short releases) {
+    public void setReleases(Integer releases) {
         this.releases = releases;
     }
 
@@ -508,27 +508,27 @@ public class promotional {
         this.releaseTime = releaseTime;
     }
 
-    public Short getAuditorStatus() {
+    public Integer getAuditorStatus() {
         return auditorStatus;
     }
 
-    public void setAuditorStatus(Short auditorStatus) {
+    public void setAuditorStatus(Integer auditorStatus) {
         this.auditorStatus = auditorStatus;
     }
 
-    public Short getPrefRange() {
+    public Integer getPrefRange() {
         return prefRange;
     }
 
-    public void setPrefRange(Short prefRange) {
+    public void setPrefRange(Integer prefRange) {
         this.prefRange = prefRange;
     }
 
-    public Short getPrefWay() {
+    public Integer getPrefWay() {
         return prefWay;
     }
 
-    public void setPrefWay(Short prefWay) {
+    public void setPrefWay(Integer prefWay) {
         this.prefWay = prefWay;
     }
 
@@ -556,19 +556,19 @@ public class promotional {
         this.promCode = promCode;
     }
 
-    public Short getDeleted() {
+    public Integer getDeleted() {
         return deleted;
     }
 
-    public void setDeleted(Short deleted) {
+    public void setDeleted(Integer deleted) {
         this.deleted = deleted;
     }
 
-    public Short getBatchType() {
+    public Integer getBatchType() {
         return batchType;
     }
 
-    public void setBatchType(Short batchType) {
+    public void setBatchType(Integer batchType) {
         this.batchType = batchType;
     }
 
@@ -580,11 +580,11 @@ public class promotional {
         this.minusSale = minusSale;
     }
 
-    public Short getMinusType() {
+    public Integer getMinusType() {
         return minusType;
     }
 
-    public void setMinusType(Short minusType) {
+    public void setMinusType(Integer minusType) {
         this.minusType = minusType;
     }
 
@@ -628,11 +628,11 @@ public class promotional {
         this.enterpriseId = enterpriseId;
     }
 
-    public Short getTimeLimitStatus() {
+    public Integer getTimeLimitStatus() {
         return timeLimitStatus;
     }
 
-    public void setTimeLimitStatus(Short timeLimitStatus) {
+    public void setTimeLimitStatus(Integer timeLimitStatus) {
         this.timeLimitStatus = timeLimitStatus;
     }
 
@@ -700,35 +700,35 @@ public class promotional {
         this.priority = priority;
     }
 
-    public Short getTotalLimit() {
+    public Integer getTotalLimit() {
         return totalLimit;
     }
 
-    public void setTotalLimit(Short totalLimit) {
+    public void setTotalLimit(Integer totalLimit) {
         this.totalLimit = totalLimit;
     }
 
-    public Short getDailyLimit() {
+    public Integer getDailyLimit() {
         return dailyLimit;
     }
 
-    public void setDailyLimit(Short dailyLimit) {
+    public void setDailyLimit(Integer dailyLimit) {
         this.dailyLimit = dailyLimit;
     }
 
-    public Short getPeopleLimit() {
+    public Integer getPeopleLimit() {
         return peopleLimit;
     }
 
-    public void setPeopleLimit(Short peopleLimit) {
+    public void setPeopleLimit(Integer peopleLimit) {
         this.peopleLimit = peopleLimit;
     }
 
-    public Short getDailyPeopleLimit() {
+    public Integer getDailyPeopleLimit() {
         return dailyPeopleLimit;
     }
 
-    public void setDailyPeopleLimit(Short dailyPeopleLimit) {
+    public void setDailyPeopleLimit(Integer dailyPeopleLimit) {
         this.dailyPeopleLimit = dailyPeopleLimit;
     }
 }

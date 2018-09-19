@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.example.mybatis.comment.comment.dao.promotionalMapper" >
-  <resultMap id="BaseResultMap" type="com.example.mybatis.comment.comment.pojo.promotional" >
+<mapper namespace="com.example.mybatis.comment.comment.dao.PromotionalDao" >
+  <resultMap id="BaseResultMap" type="com.example.mybatis.comment.comment.pojo.Promotional" >
     <id column="prom_id" property="promId" jdbcType="INTEGER" />
     <result column="enterprise_code" property="enterpriseCode" jdbcType="VARCHAR" />
     <result column="prom_name" property="promName" jdbcType="VARCHAR" />
@@ -75,7 +75,7 @@
     delete from t_promotional
     where prom_id = #{promId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.example.mybatis.comment.comment.pojo.promotional" >
+  <insert id="insert" parameterType="com.example.mybatis.comment.comment.pojo.Promotional" >
     insert into t_promotional (prom_id, enterprise_code, prom_name, 
       start_time, end_time, vip_level, 
       use_platform, sale_type, remark, 
@@ -113,7 +113,7 @@
       #{totalLimit,jdbcType=SMALLINT}, #{dailyLimit,jdbcType=SMALLINT}, #{peopleLimit,jdbcType=SMALLINT}, 
       #{dailyPeopleLimit,jdbcType=SMALLINT})
   </insert>
-  <insert id="insertSelective" parameterType="com.example.mybatis.comment.comment.pojo.promotional" >
+  <insert id="insertSelective" parameterType="com.example.mybatis.comment.comment.pojo.Promotional" >
     insert into t_promotional
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="promId != null" >
@@ -432,7 +432,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.example.mybatis.comment.comment.pojo.promotional" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.example.mybatis.comment.comment.pojo.Promotional" >
     update t_promotional
     <set >
       <if test="enterpriseCode != null" >
@@ -591,7 +591,7 @@
     </set>
     where prom_id = #{promId,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.example.mybatis.comment.comment.pojo.promotional" >
+  <update id="updateByPrimaryKey" parameterType="com.example.mybatis.comment.comment.pojo.Promotional" >
     update t_promotional
     set enterprise_code = #{enterpriseCode,jdbcType=VARCHAR},
       prom_name = #{promName,jdbcType=VARCHAR},
